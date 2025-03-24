@@ -3,9 +3,18 @@
 
 from ultralytics import YOLO
 import cv2
+import pandas as pd
 
-# Load a pre-trained YOLOv8 model (trained on COCO)
-model = YOLO("yolov8n.pt")  # You can also try yolov8s.pt or yolov8m.pt for better accuracy
+#Tomorrow's task:
+# Store the output data into a csv file
+# How to: pd.write_csv, name the file, video_data = pd.write_csv(outdata)
+
+# Load a pre-trained YOLOv8 model (trained on COCO) 
+model = YOLO("yolov8m.pt")  #You can also try yolov8s.pt or yolov8m.pt for better accuracy
+#yolov8.pt - version 1
+#yolov8s.pt - version 2
+#yolov8m.pt - version 3 - detected more objects but it was less accurate, it moved slower, there was some lagging
+#this could be due to the laptop or the algorithm
 
 # Load your video file
 video_path = "RingVideo1.mp4"  # Replace this with your actual file name
